@@ -76,3 +76,27 @@ body {
     background: #fff;
     color: #000;
 }
+
+/* About Section */
+
+.about {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+}
+
+.about-title {
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
