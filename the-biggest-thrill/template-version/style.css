@@ -1,0 +1,79 @@
+/* Background Image */
+body {
+  background-image: url(./img/bt-bg.png);
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  background-color: black;
+  color: #fff;
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0;
+}
+
+.navbar-brand {
+  float: left;
+  min-height: 55px;
+  padding: 0 15px 5px;
+}
+
+.navbar-inverse .navbar-nav .active a,
+.navbar-inverse .navbar-nav .active a:focus,
+.navbar-inverse .navbar-nav .active a:hover {
+  color: #fff;
+  background-color: #5e4485;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color: #d5d5d5;
+}
+
+.row {
+  color: #fff;
+}
+
+#icon {
+  max-width: 200px;
+  margin: 1% auto;
+}
+
+/* Footer Style */
+footer {
+  width: 100%;
+  background-color: black;
+  padding: 2%;
+  color: #fff;
+}
+
+/* Footer Icon Style */
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.fa:hover {
+  color: #d5d5d5;
+  text-decoration: none;
+}
+
+/* Media Query to Social Media Icons */
+@media (max-width: 900px) {
+  .fa {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+/* Edit for mobile images */
+@media (max-width: 600px) {
+  #icon {
+    max-width: 150px;
+  }
+
+  h4 {
+    font-size: 1.7em;
+  }
+}

@@ -1,0 +1,106 @@
+/* Media Queries */
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('img/bt-bg-main.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Nav Bar */
+.navbar {
+    /* background-image: url('images/bt-bg-main.png'); */
+}
+
+.nav-link,
+.navbar-brand {
+    color: white;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+/* Container Image */
+.header {
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
+}
+
+/* Article */
+article img {}
+
+.description {
+    left: 50%;
+    position: absolute;
+    top: 90%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+    flex-direction: column;
+    /* border: black solid 2px; */
+    /* debugging */
+}
+
+.title h1 {
+    color: #6ab446;
+    margin-top: 5%;
+    margin-bottom: -5%;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.info {
+    border: solid white 2px;
+}
+
+/* Date */
+.date {
+    width: 50%;
+    border: solid black 1px;
+}
+
+/* Get Tickets */
+#tickets {
+    width: 50%;
+    /* border: 1px solid black; */
+}
+
+/* .description button {
+    border: 1px solid #0DD80D;
+    border-radius: 0;
+    color: #F67512;
+    font-weight: bold;
+}
+.description button:hover {
+    border: 1px solid #0DD80D;
+    background: black;
+    color: #F67512;
+} */
+
+/* Footer */
+.page-footer {
+    /* background-color: black; */
+    color: #fe8206;
+    padding: 60px 0 20px;
+}
+
+.footer-copyright {
+    color: #206116;
+    padding: 40px 0;
+    font-weight: bold;
+}
