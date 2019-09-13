@@ -1,3 +1,3 @@
-This repo will consist of all FreeCodeCamp assignments.
+FCHS
 
-![](/logo/1MiniLogologo.png)
+![](/images/1MiniLogologo.png)
