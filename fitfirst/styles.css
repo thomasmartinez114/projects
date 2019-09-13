@@ -8,8 +8,6 @@ body {
 
 .navbar {
     background: white;
-    /* border: 2px solid black;
-    for debugging */
 }
 
 .nav-link,
@@ -64,4 +62,17 @@ body {
     color: #fff;
     font-size: 1.3rem;
     line-height: 1.5;
+}
+
+.description button {
+    border: 1px solid black;
+    background: red;
+    border-radius: 0;
+    color: #fff;
+}
+
+.description button:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
 }
