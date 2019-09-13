@@ -4,4 +4,4 @@ WPD Radio Tracking - built by Thomas Martinez
 
 - Referenced https://www.youtube.com/watch?time_continue=851&v=qvBZevK1HPo
 
-![](/logo/radio.jpg)
+![](logo/radio.jpg)
