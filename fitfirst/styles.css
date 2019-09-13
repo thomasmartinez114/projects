@@ -1,0 +1,8 @@
+* {
+    background-color: grey
+}
+
+.wrapper-container {
+    display: flex;
+    justify-content: center
+}

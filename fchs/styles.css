@@ -1,0 +1,194 @@
+/* Body Edit */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 900px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    width: 900px;
+}
+
+.header {
+    width: 900px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    justify-content: center;
+}
+
+.images-container {
+    flex-wrap: wrap;
+}
+
+.photo-grid-container {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.photo-grid {
+  width: 900px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.photo-grid-item {
+  border: 1px solid #fff;
+  width: 300px;
+  height: auto;
+  justify-content: center;
+  alignment-items: center;
+}
+
+aside {
+    display: flex;
+    float: right;
+}
+
+
+
+body {
+    background: linear-gradient(tan, beige);
+}
+
+/*hr {*/
+/*    display: block;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    border-style: inset;*/
+/*    border-width: 1px;*/
+/*    border-color: black;*/
+/*}*/
+
+
+/*Images Edit*/
+
+.resize {
+    height: 100px;
+    width: 100px;
+}
+
+/*.floatup {*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.floatup2 {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/* Wrapper Edit */
+
+/*#wrapper {*/
+/*    width: 1300px;*/
+/*    height: 1000px;*/
+/*    margin-right: auto;*/
+/*    margin-left: auto;*/
+/*    border: groove 10px none;*/
+/*    border-radius: 25px;*/
+/*    background-color: none;*/
+/*    color: black;*/
+    /*background-image: url(images/hclogo.jpg);*/
+/*}*/
+
+
+/* Header Center */
+
+/*header {*/
+/*    margin-left: 430px;*/
+/*}*/
+
+
+/* Nav Edit */
+
+/*nav {*/
+/*    width: 150px;*/
+/*    height: 400px;*/
+/*    float: left;*/
+/*    text-align: center;*/
+/*    border: thin dashed none;*/
+/*    background-color: none;*/
+/*}*/
+
+
+/* Article Edit */
+
+/*article {*/
+/*    width: 800px;*/
+/*    border: thin solid none;*/
+/*    height: 600px;*/
+/*    float: left;*/
+/*    color: black;*/
+/*    font-size: 20px;*/
+/*    background-color: none;*/
+/*    padding-left: 40px;*/
+/*}*/
+
+
+/* Images Edit */
+
+/*article>div>a>img {*/
+/*    display: inline-block;*/
+/*    margin-top: 50px;*/
+/*    margin-right: 80px;*/
+/*    text-align: center;*/
+/*}*/
+
+
+/* Aside Edit */
+
+/*aside {*/
+/*    width: 300px;*/
+/*    height: 400px;*/
+/*    float: right;*/
+/*    border: solid thin none;*/
+/*    text-align: center;*/
+
+/*}*/
+
+/*aside h3 {*/
+/*    vertical-align: middle;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*aside>div {*/
+/*	margin-top: 100px;*/
+/*}*/
+
+
+/* Footer Edit */
+
+/*footer {*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    clear: both;*/
+/*    border: solid thin none;*/
+/*    background-color: none;*/
+/*    margin-left: 410px;*/
+/*    margin-top: 680px;*/
+/*}*/
+
+/*footer p {*/
+/*    font-size: 12px;*/
+/*}*/
+
+/*Images Center*/
+
+/*.images {*/
+/*	text-align: center;*/
+/*}*/
