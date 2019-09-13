@@ -1,0 +1,35 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: grey;
+}
+
+/* Navigation Bar */
+
+#logo {
+    height: 50%;
+}
+
+.navbar {
+    background: white;
+    /* border: 2px solid black;
+    for debugging */
+}
+
+.nav-link,
+.navbar-brand {
+    color: grey;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
