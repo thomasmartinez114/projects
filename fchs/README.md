@@ -1,3 +1,3 @@
 FCHS
 
-![](/images/1MiniLogo.png)
+![](images/1MiniLogo.png)
