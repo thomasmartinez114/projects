@@ -4,5 +4,6 @@
 
 - [ ] Image Carousel on Header
   - [ ] Add "Welcome to Fit First RI" image
-- [ ] Add Video after About section
+- [x] Add Video after About section
+  - [ ] Fix video alignment
 - [ ] Implement sendpoint into page

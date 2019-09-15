@@ -77,6 +77,23 @@ body {
   color: #000;
 }
 
+/* Video Section */
+
+.video-section,
+.video-container {
+  border: 2px solid black;
+}
+
+video {
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 75%;
+  height: 75%;
+}
+
+
 /* About Section */
 
 .about {
