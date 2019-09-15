@@ -83,6 +83,7 @@ body {
   margin: 4em auto;
   padding: 1em;
   position: relative;
+  /* background-color: silver; */
 }
 
 .about-title {
@@ -126,6 +127,14 @@ body {
 }
 
 /* Footer Section */
+
+.page-footer {
+  margin: 0 0 0 0;
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: silver;
+  border: 1px solid red;
+}
 
 .icon {
   text-align: center;
