@@ -126,3 +126,12 @@ body {
 }
 
 /* Footer Section */
+
+.footer-text {
+  color: red;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
