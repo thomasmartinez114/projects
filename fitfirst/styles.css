@@ -127,6 +127,15 @@ body {
 
 /* Footer Section */
 
+.icon {
+  text-align: center;
+  margin-top: 1.3rem;
+}
+
+.footer-icon {
+  color: black;
+}
+
 .footer-text {
   color: red;
   font-size: 1.3rem;
@@ -134,9 +143,4 @@ body {
   margin-top: 5px;
   text-transform: uppercase;
   text-align: center;
-}
-
-.icon {
-  text-align: center;
-  margin-top: 1.3rem;
 }
