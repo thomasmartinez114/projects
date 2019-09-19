@@ -7,3 +7,5 @@
 - [x] Add Video after About section
   - [ ] Fix video alignment
 - [ ] Implement sendpoint into page
+- [ ] Implement Parallax Scrolling on photos
+  - https://www.w3schools.com/howto/howto_css_parallax.asp
