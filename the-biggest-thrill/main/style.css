@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('img/bt-bg.png');
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    margin-top: -200px;
+}
+
+#flyer {
+    margin-top: -250px;
+}
