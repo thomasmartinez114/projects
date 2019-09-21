@@ -7,9 +7,12 @@ body {
 }
 
 .header {
-    margin-top: -200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
 }
 
-#flyer {
-    margin-top: -250px;
+.photos {
+    display: inline-block;
 }
