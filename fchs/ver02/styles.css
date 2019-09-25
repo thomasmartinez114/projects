@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: tan;
+}
+
+.navbar {
+    font-size: 1.2em;
+    background-color: tan;
+}
+
+.navbar-brand {
+    min-height: 55px;
+    padding: 0 15px 5px;
+}
+
+.navbar-default .navbar-nav li a {
+    color: black;
+}
+
+.navbar-default .navbar-nav li a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.padding {
+    align-content: center;
+    padding: 10%;
+}
+
+.logo {
+    height: auto;
+}
+
+.padding img {
+    width: 50%;
+    height: 50%;
+}
+
+footer {
+    width: 50%;
+    padding: 5% 5% 5% 5%;
+}
