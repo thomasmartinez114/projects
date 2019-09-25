@@ -1,18 +1,8 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url('img/bt-bg.png');
-    background-size: cover;
-    position: relative;
 }
 
 .header {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    text-align: center;
-}
-
-.photos {
-    display: inline-block;
+    background-image: url('img/bt-bg.png');
 }
