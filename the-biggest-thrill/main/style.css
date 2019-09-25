@@ -26,9 +26,11 @@ body {
 }
 
 #home {
-    background: url('img/bt-logo.png') no-repeat center center fixed;
+    background: url('img/bt-logo.png') no-repeat center center
+        /*fixed */
+    ;
     display: table;
-    height: 85%;
+    height: 70%;
     position: relative;
     width: 100%;
     background-size: cover;
@@ -70,6 +72,12 @@ footer {
     font-family: 'Creepster',
         cursive;
     color: orange;
+    font-size: 4.5rem;
+}
+
+.green {
+    color: #268a26;
+    font-size: 3rem;
 }
 
 .creepy-size {
