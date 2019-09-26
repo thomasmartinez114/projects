@@ -88,6 +88,10 @@ footer {
     text-align: center;
 }
 
+.center-pic {
+    padding: 50%:
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .fa {
