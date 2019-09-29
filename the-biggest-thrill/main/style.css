@@ -2,7 +2,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-image: url('img/bt-bg.png')
+    background-image: url('img/bt-bg.png');
 }
 
 .navbar {
@@ -88,8 +88,8 @@ footer {
     text-align: center;
 }
 
-.center-pic {
-    padding: 50%:
+.row>div>.center-pic {
+    margin-top: 5px;
 }
 
 /* Responsive */
