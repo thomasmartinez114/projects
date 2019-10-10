@@ -156,72 +156,70 @@
         <a href="https://www.facebook.com/thebiggestthrill/?ref=page_internal" target="_blank"
           class="fa fa-facebook green"></a>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-          <form id="iqx-number-submit" action="https://share-api.iqxamplify.com/submitNumber" method="post">
-            <div class="">
-              <button
-                style="color:#fff;background-color:#F15A29;border-top-right-radius:1px;border-bottom-right-radius:1px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size: 13px; padding: 1px 15px; height: 45px; border: solid 1px #95989A; font-weight: 700; outline: none; cursor: pointer; z-index: 2; margin-top: 0px; position: absolute;right:-2px;">SUBSCRIBE
-                NOW</button>
-              <input
-                style="padding-left: 10px;border-radius: 1px;border-color:#DDE0E6; height: 35px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;line-height: initial;font-size: 18px;padding-top: 4px;padding-bottom: 4px; border: solid 1px #95989A; width: 100%;"
-                placeholder="Mobile Number" name="number" value="" type="tel">
-              <input type="hidden" name="tags" value="the biggest thrill">
-              <input type="hidden" name="source" value="widget">
-              <input type="hidden" name="requestId" value="335b318edd8f4cf4a70819f0c65069fe">
-              <input type="hidden" name="organizationId" value="0f99cb979c8848e685f48719d11591d5">
-            </div>
-            <div id="iqx-response-message"
-              style="display:none;margin-top:10px;font-size:9px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
-            </div>
-            <div
-              style="margin-top: 6px;font-size:8px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;color: #9DA0A7;text-align: center;">
-              By entering and submitting your number you are (a) agreeing to receive a confirmation text
-              message and recurring promotional messages from an automated telephone dialing system and
-              (b) confirming that you have read and accepted Amplify's <a href="http://bit.ly/subterms">Terms of Service
-                and Privacy Policy</a>.
-              Consent to future text messages is not a condition of purchase. Msg&amp;data rates may apply. Text STOP to
-              opt-out.
-            </div>
-          </form>
-          <script>
-            if (typeof jQuery === 'undefined') {
-              var fileref = document.createElement('script')
-              fileref.setAttribute("type", "text/javascript")
-              fileref.setAttribute("src", "//code.jquery.com/jquery-3.1.1.min.js")
-              document.getElementsByTagName("head")[0].appendChild(fileref)
-              setTimeout(function () {
-                jQuery(document).ready(function () {
-                  jQuery("#iqx-number-submit").on("submit", function (e) {
-                    e.preventDefault();
-                    submitForm();
-                  });
-
-                });
-              }, 1000);
-            } else {
-              jQuery(document).ready(function () {
-                jQuery("#iqx-number-submit").on("submit", function (e) {
-                  e.preventDefault();
-                  submitForm();
-                });
-              });
-            }
-
-            function submitForm() {
-
-              jQuery.ajax({
-                type: 'POST',
-                url: jQuery('#iqx-number-submit').attr('action'),
-                data: jQuery('#iqx-number-submit').serialize(),
-                success: function (response) {
-                  jQuery('#iqx-response-message').text(response.message).css('display', 'block');
-                }
-              });
-            }
-          </script>
+    </div>
+    <div>
+      <form id="iqx-number-submit" action="https://share-api.iqxamplify.com/submitNumber" method="post">
+        <div class="">
+          <button
+            style="color:#fff;background-color:#F15A29;border-top-right-radius:1px;border-bottom-right-radius:1px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-size: 13px; padding: 1px 15px; height: 45px; border: solid 1px #95989A; font-weight: 700; outline: none; cursor: pointer; z-index: 2; margin-top: 0px; position: absolute;right:300px;">SUBSCRIBE
+            NOW</button>
+          <input
+            style="padding-left: 10px;border-radius: 1px;border-color:#DDE0E6; height: 35px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;line-height: initial;font-size: 18px;padding-top: 4px;padding-bottom: 4px; border: solid 1px #95989A; width: 50%;"
+            placeholder="Mobile Number" name="number" value="" type="tel">
+          <input type="hidden" name="tags" value="the biggest thrill">
+          <input type="hidden" name="source" value="widget">
+          <input type="hidden" name="requestId" value="335b318edd8f4cf4a70819f0c65069fe">
+          <input type="hidden" name="organizationId" value="0f99cb979c8848e685f48719d11591d5">
         </div>
-      </div>
+        <div id="iqx-response-message"
+          style="display:none;margin-top:10px;font-size:9px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;">
+        </div>
+        <div
+          style="margin-top: 6px;font-size:8px;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;color: #9DA0A7;text-align: center;">
+          By entering and submitting your number you are (a) agreeing to receive a confirmation text
+          message and recurring promotional messages from an automated telephone dialing system and
+          (b) confirming that you have read and accepted Amplify's <a href="http://bit.ly/subterms">Terms of Service
+            and Privacy Policy</a>.
+          Consent to future text messages is not a condition of purchase. Msg&amp;data rates may apply. Text STOP to
+          opt-out.
+        </div>
+      </form>
+      <script>
+        if (typeof jQuery === 'undefined') {
+          var fileref = document.createElement('script')
+          fileref.setAttribute("type", "text/javascript")
+          fileref.setAttribute("src", "//code.jquery.com/jquery-3.1.1.min.js")
+          document.getElementsByTagName("head")[0].appendChild(fileref)
+          setTimeout(function () {
+            jQuery(document).ready(function () {
+              jQuery("#iqx-number-submit").on("submit", function (e) {
+                e.preventDefault();
+                submitForm();
+              });
+
+            });
+          }, 1000);
+        } else {
+          jQuery(document).ready(function () {
+            jQuery("#iqx-number-submit").on("submit", function (e) {
+              e.preventDefault();
+              submitForm();
+            });
+          });
+        }
+
+        function submitForm() {
+
+          jQuery.ajax({
+            type: 'POST',
+            url: jQuery('#iqx-number-submit').attr('action'),
+            data: jQuery('#iqx-number-submit').serialize(),
+            success: function (response) {
+              jQuery('#iqx-response-message').text(response.message).css('display', 'block');
+            }
+          });
+        }
+      </script>
     </div>
   </footer>
 </body>
