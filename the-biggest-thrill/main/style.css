@@ -102,5 +102,6 @@ footer {
 }
 
 video {
-    margin-left: 200px;
+    display: block;
+    margin: 0 auto;
 }
