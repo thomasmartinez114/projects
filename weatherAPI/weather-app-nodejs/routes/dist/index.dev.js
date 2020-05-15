@@ -16,5 +16,24 @@ router.get('/', function (req, res, next) {
     'body': '',
     forecast: ''
   });
+}); // Weather route
+
+router.post('/weather', function (req, res, next) {
+  var city = req.body.city;
+  url = url + city + "&" + appId;
+  request(url, function (error, response, body) {
+    body = JSON.parse(body);
+
+    if (error && response.statusCode != 200) {
+      throw error;
+    }
+
+    var country = body.sys.country ? body.sys.country : '';
+    var forecast = "For city " + city + ', country ' + country;
+    res.render('index', {
+      body: body,
+      forecast: forecast
+    });
+  });
 });
 module.exports = router;

@@ -11,4 +11,20 @@ router.get('/', function(req, res, next) {
   res.render('index', {'body':'', forecast: ''});
 });
 
+// Weather route
+router.post('/weather', function(req, res, next){
+  let city = req.body.city;
+  url = url+city+"&"+appId;
+  request(url, function (error, response, body) {
+    body = JSON.parse(body);
+    if(error && response.statusCode != 200) {
+      throw error;
+    }
+
+    let country = (body.sys.country) ? body.sys.country : '';
+    let forecast = "For city "+city+', country '+country;
+    res.render('index', {body : body, forecast: forecast});
+  });
+});
+
 module.exports = router;
