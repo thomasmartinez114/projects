@@ -18,3 +18,33 @@ block content
               button.btn.btn-primary(type="submit") Fetch Weather
 
             hr
+
+            .row
+       .col-md-12
+         p
+          br
+          br
+          strong Weather Forecast #{forecast}
+         table.table
+           thead
+             tr
+               th Longitude / Latitude
+               
+               th Pressure
+               th Temprature
+               th Humidty
+           tbody
+              if body
+               tr
+                 td
+                   #{body.coord.lon} / #{body.coord.lon}
+                 td 
+                   #{body.main.pressure}
+                 td
+                   #{body.main.temp}
+                 td
+                   #{body.main.humidity}
+              else
+               tr
+                   td(colspan="6")
+                     | Enter city name and click Fetch Weather button
