@@ -1,5 +1,20 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    h2
+      p
+        | Weather Forecast Tool using CLimacell API
+      br
+      br
+      .row
+        .col-md-6
+          form.form-inline(method="post", action="weather")
+            .form-group
+              label.sr-only(for="inputEmail") City Name
+              input.form-control( name="city" type="text" placeholder="Enter City Name"
+              required='required')
+
+              |
+              button.btn.btn-primary(type="submit") Fetch Weather
+
+            hr
