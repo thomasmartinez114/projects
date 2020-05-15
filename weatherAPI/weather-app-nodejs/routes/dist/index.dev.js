@@ -13,7 +13,8 @@ var request = require('request');
 
 router.get('/', function (req, res, next) {
   res.render('index', {
-    title: 'Express'
+    'body': '',
+    forecast: ''
   });
 });
 module.exports = router;
