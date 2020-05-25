@@ -18,12 +18,17 @@ const Twitter = require('twitter-lite');
         response = await app.get(`/search/tweets`, {
             q: "Michael Jordan", // Search term
             lang: "en",
-            count: 100,
+            count: 5,
         });
 
-        // Retrieve bearer token from twitter
-        const response = await user.getBearerToken();
-        console.log(`Retrieved the Bearer token from twitter: ${response.access_token}`);
+        // Loop over the tweets and print the text
+        for (tweet of response.statuses) {
+            console.dir(tweet.text);
+        }
+
+        // // Retrieve bearer token from twitter
+        // const response = await user.getBearerToken();
+        // console.log(`Retrieved the Bearer token from twitter: ${response.access_token}`);
 
     } catch(e) {
         console.log("There was an error calling the Twitter API.");
