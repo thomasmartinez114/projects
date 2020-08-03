@@ -31,7 +31,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/background.jpg);
+    background: url(../img/background1.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -42,7 +42,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(68, 68, 68, 0.8); }
 
 h1,
 h2,
@@ -57,8 +57,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    padding: 0.2rem 1rem; }
 
 a {
   color: #fff;
