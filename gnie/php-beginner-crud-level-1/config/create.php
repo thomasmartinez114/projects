@@ -65,8 +65,8 @@ if($_POST){
         </tr>
             <td></td>
             <td>
-                <input type='submit' value='Save' class='btn btn-primary' />
-                <a href='index.php' class='btn btn-danger'>Back to view Files</a>
+                <input type='submit' value='Save' class='btn btn-success' />
+                <a href='index.php' class='btn btn-danger'>Go Back</a>
             </td>
         </tr>
     </table>
