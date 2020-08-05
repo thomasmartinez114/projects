@@ -4,13 +4,11 @@ $host = "localhost";
 $db_name = "gnie_files";
 $username = "gnietest";
 $password = "test123#";
+$con = mysqli_connect({$host}, $username, $password, {$db_name});
 
-try {
-    $con = new PDO("mysql:host={$host};dbname={$db_name}", $username, $password);
+// check connection
+if(!$con){
+    echo 'Connection error: ' . mysqli_connect_error();
 }
 
-// show error
-catch(PDOException $exception){
-    echo "Connection error: " . $exception->getMessage();
-}
 ?>
