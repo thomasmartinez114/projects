@@ -75,4 +75,16 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  // Branding Side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
