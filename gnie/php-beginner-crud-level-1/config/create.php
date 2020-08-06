@@ -60,8 +60,8 @@ if($_POST){
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>
         <tr>
-            <td>File Name</td>
-            <td><input type='text' fileName='fileName' class='form-control' /></td>
+            <td>fileName</td>
+            <td><input type='text' name='fileName' class='form-control' /></td>
         </tr>
             <td></td>
             <td>
