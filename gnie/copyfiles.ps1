@@ -1,1 +1,3 @@
-Robocopy C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\ "\\USAUSGNIEQA01\Webpages\GNIE_QA\sites\FORMS\fs" /S /R:1 /W:1 /LOG:C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt
+Robocopy C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\create.php "\\USAUSGNIEQA01\Webpages\GNIE_QA\sites\cr\files" /S /R:1 /W:1 /LOG:C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt
+
+Robocopy C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\database.php "\\USAUSGNIEQA01\Webpages\GNIE_QA\sites\files\" /S /R:1 /W:1 /LOG:C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt
