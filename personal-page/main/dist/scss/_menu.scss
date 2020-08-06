@@ -1,3 +1,5 @@
+@import 'config';
+
 // Menu Button
 .menu-btn {
   position: absolute;
@@ -90,7 +92,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url('../img/portrait.jpg');
+      background: $portrait;
       border-radius: 50%; // make it a circle
       border: solid 3px $secondary-color;
     }
