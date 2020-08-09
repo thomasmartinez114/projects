@@ -73,7 +73,6 @@
     @include easeOut;
 
     &.show {
-      // Slide in from top
       transform: translate3d(0, 0, 0);
     }
   }
@@ -93,7 +92,7 @@
       width: 250px;
       height: 250px;
       background: $portrait;
-      border-radius: 50%; // make it a circle
+      border-radius: 50%;
       border: solid 3px $secondary-color;
     }
   }
