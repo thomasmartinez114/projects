@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../img/portraitsample.jpg");
+      background: url("../img/portrait-main.jpg");
       border-radius: 50%;
       border: solid 3px #0080ff; }
 
