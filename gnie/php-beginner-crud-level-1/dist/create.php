@@ -25,7 +25,7 @@ if($_POST){
     try{
      
         // insert query
-        $query = "INSERT INTO files_cr_cc SET fileName=:fileName";
+        $query = "INSERT INTO files_cr_cc SET fileName=:fileName, created=:created";
  
         // prepare query for execution
         $stmt = $con->prepare($query);
@@ -37,8 +37,8 @@ if($_POST){
         $stmt->bindParam(':fileName', $fileName);
          
         // specify when this record was inserted to the database
-        $modified=date('Y-m-d H:i:s');
-        $stmt->bindParam(':modified', $modified);
+        $created=date('Y-m-d H:i:s');
+        $stmt->bindParam(':created', $created);
          
         // Execute the query
         if($stmt->execute()){
@@ -60,7 +60,7 @@ if($_POST){
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>
         <tr>
-            <td>fileName</td>
+            <td>File Name</td>
             <td><input type='text' name='fileName' class='form-control' /></td>
         </tr>
             <td></td>
