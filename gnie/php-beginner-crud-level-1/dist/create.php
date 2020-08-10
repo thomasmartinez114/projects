@@ -2,19 +2,25 @@
 <html>
 <head>
     <title>GNIE - Costa Rica | Upload</title>
-      
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <!-- Tab Icon -->
+    <link rel="icon" type="image/png" href="../../../images/LogoGlobe.png" />      
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
           
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-light bg-light">
+        <a href="index.php" class="navbar-brand"><img src="../../../images/GNIEDirect_logo.png" alt="GNIE Direct Logo" class="navbar-logo" /></a>
+        <h3 class="title">Upload a File</h3>
+    </nav>
   
     <!-- container -->
     <div class="container">
-   
-        <div class="page-header">
-            <h1>Upload a File</h1>
-        </div>
       
 <?php
 if($_POST){
@@ -57,6 +63,7 @@ if($_POST){
 ?>
  
 <!-- html form here where the product information will be entered -->
+<div class="row row-top">
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>
         <tr>
@@ -71,8 +78,10 @@ if($_POST){
         </tr>
     </table>
 </form>
+</div>
           
     </div> <!-- end .container -->
+
       
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -81,4 +90,11 @@ if($_POST){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 </body>
-</html>
+
+        <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <p><img src="../../../images/IGT_Logo_White.png" alt="IGT Logo" class="footer-logo" /></p>
+                    <?php include('../../../templates/footer.php');
