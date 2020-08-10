@@ -12,11 +12,9 @@
           
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light bg-light">
-        <a href="index.php" class="navbar-brand"><img src="../../../images/GNIEDirect_logo.png" alt="GNIE Direct Logo" class="navbar-logo" /></a>
-        <h3 class="title">Upload a File</h3>
+        <a href="../../../index.php" class="navbar-brand"><img src="../../../images/GNIEDirect_logo.png" alt="GNIE Direct Logo" class="navbar-logo" /></a>
     </nav>
   
     <!-- container -->
@@ -63,7 +61,6 @@ if($_POST){
 ?>
  
 <!-- html form here where the product information will be entered -->
-<div class="row row-top">
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>
         <tr>
@@ -78,7 +75,7 @@ if($_POST){
         </tr>
     </table>
 </form>
-</div>
+
           
     </div> <!-- end .container -->
 
@@ -88,8 +85,6 @@ if($_POST){
    
 <!-- Latest compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-</body>
 
         <!-- Footer -->
     <footer class="page-footer">
