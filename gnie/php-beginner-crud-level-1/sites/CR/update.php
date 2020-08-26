@@ -33,34 +33,34 @@
       <h3>Update a File</h3>
       </div> 
 
-      <?php
+    <?php
 // get passed parameter value, in this case, the record ID
 // isset() is a PHP function used to verify if a value is there or not
 $id=isset($_GET['id']) ? $_GET['id'] : die('ERROR: Record ID not found.');
- 
+
 //include database connection
     include '../database.php';
     include './tableName.php';
- 
+
 // read current record's data
 try {
     // prepare select query
     $query = "SELECT id, fileName FROM $tableName WHERE id = ? LIMIT 0,1";
     $stmt = $con->prepare( $query );
-     
+
     // this is the first question mark
     $stmt->bindParam(1, $id);
-     
+
     // execute our query
     $stmt->execute();
-     
+
     // store retrieved row to a variable
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-     
+
     // values to fill up our form
     $fileName = $row['fileName'];
 }
- 
+
 // show error
 catch(PDOException $exception){
     die('ERROR: ' . $exception->getMessage());
@@ -68,43 +68,43 @@ catch(PDOException $exception){
 ?>
 
 <?php
- 
+
 // check if form was submitted
 if($_POST){
-     
+
     try{
-     
+
         // write update query
         // in this case, it seemed like we have so many fields to pass and 
         // it is better to label them and not use question marks
         $query = "UPDATE gnie_files.$tableName SET fileName=:fileName WHERE id = :id";
- 
+
         // prepare query for excecution
         $stmt = $con->prepare($query);
- 
+
         // posted values
         $fileName=htmlspecialchars(strip_tags($_POST['fileName']));
- 
+
         // bind the parameters
         $stmt->bindParam(':fileName', $fileName);
         $stmt->bindParam(':id', $id);
-         
+
         // Execute the query
         if($stmt->execute()){
             echo "<div class='alert alert-success'>Record was updated.</div>";
         }else{
             echo "<div class='alert alert-danger'>Unable to update record. Please try again.</div>";
         }
-         
+
     }
-     
+
     // show errors
     catch(PDOException $exception){
         die('ERROR: ' . $exception->getMessage());
     }
 }
 ?>
- 
+
 <!--we have our html form here where new record information can be updated-->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id={$id}");?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>
@@ -121,14 +121,14 @@ if($_POST){
         </tr>
     </table>
 </form>
-      
+
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-   
+
 <!-- Latest compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -143,8 +143,8 @@ function clickinner(target) { // Target refers to the clicked element
 
     <!-- Footer -->
     <footer class="page-footer">
-      <div class="footer-container">
-        <div class="row">
-          <div class="col-lg-4 col-md-8 col-sm-12">
-            <p><img src="../../images/IGT_Logo_White.png" alt="IGT Logo" class="footer-logo" /></p>
-            <?php include('../../templates/footer.php');
+        <div class="footer-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                <p><img src="../../images/IGT_Logo_White.png" alt="IGT Logo" class="footer-logo" /></p>
+                    <?php include('../../templates/footer.php');

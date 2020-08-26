@@ -1,45 +1,47 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>PDO - Read Records - PHP CRUD Tutorial</title>
-     
-    <!-- Latest compiled and minified Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-         
-    <!-- custom css -->
-    <style>
-    .m-r-1em{ margin-right:1em; }
-    .m-b-1em{ margin-bottom:1em; }
-    .m-l-1em{ margin-left:1em; }
-    .mt0{ margin-top:0; }
-    </style>
- 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Styling -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Tab Icon -->
+  <link rel="icon" type="image/png" href="../../../images/LogoGlobe.png" />
+
+  <title>GNIE | FILES | CR</title>
 </head>
+
 <body>
- 
-    <!-- container -->
-    <div class="container">
-  
-        <div class="page-header">
-            <h1>Read Products</h1>
-        </div>
-     
-        <!-- PHP code to read records will be here -->
-        <?php
+  <div class="container">
+    <div class="row row-top">
+      <div>
+      <div class="page-header">
+      <!-- <h3>All Files</h3> -->
+      </div> 
+      <?php
 // include database connection
-include 'config/database.php';
+    include '../database.php';
+    include './tableName.php';
 
 // PAGINATION VARIABLES
 // page is the current page, if there's nothing set, default is page 1
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
  
 // set records or rows of data per page
-$records_per_page = 5;
+$records_per_page = 8;
  
 // calculate for the query LIMIT clause
 $from_record_num = ($records_per_page * $page) - $records_per_page;
- 
-// delete message prompt will be here
+
+
+// delete message prompt will be here 
 $action = isset($_GET['action']) ? $_GET['action'] : "";
  
 // if it was redirected from delete.php
@@ -47,36 +49,39 @@ if($action=='deleted'){
     echo "<div class='alert alert-success'>Record was deleted.</div>";
 }
  
+// select all data
+// $query = "SELECT id, fileName, modified FROM $tableName ORDER BY modified DESC";
+// $stmt = $con->prepare($query);
+// $stmt->execute();
+
 // select data for current page
-$query = "SELECT id, name, description, price FROM products ORDER BY id DESC
+$query = "SELECT id, fileName, modified FROM $tableName ORDER BY modified DESC
     LIMIT :from_record_num, :records_per_page";
  
 $stmt = $con->prepare($query);
 $stmt->bindParam(":from_record_num", $from_record_num, PDO::PARAM_INT);
 $stmt->bindParam(":records_per_page", $records_per_page, PDO::PARAM_INT);
 $stmt->execute();
+ 
 // this is how to get number of rows returned
 $num = $stmt->rowCount();
  
 // link to create record form
-echo "<a href='create.php' class='btn btn-primary m-b-1em'>Create New Product</a>";
+// echo "<a href='create.php' class='btn btn-primary m-b-1em'>Create New File</a>";
  
 //check if more than 0 record found
 if($num>0){
  
-    // data from database will be here
     echo "<table class='table table-hover table-responsive table-bordered'>";//start table
  
     //creating our table heading
     echo "<tr>";
         echo "<th>ID</th>";
-        echo "<th>Name</th>";
-        echo "<th>Description</th>";
-        echo "<th>Price</th>";
-        echo "<th>Action</th>";
+        echo "<th>File Name</th>";
+        echo "<th>Modified</th>";
+        echo "<th>Actions</th>";
     echo "</tr>";
      
-    // table body will be here
     // retrieve our table contents
 // fetch() is faster than fetchAll()
 // http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
@@ -89,12 +94,12 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
     // creating new table row per record
     echo "<tr>";
         echo "<td>{$id}</td>";
-        echo "<td>{$name}</td>";
-        echo "<td>{$description}</td>";
-        echo "<td>${$price}</td>";
+        echo "<td>{$fileName}</td>";
+        echo "<td>{$modified}</td>";
         echo "<td>";
-            // read one record 
-            echo "<a href='read_one.php?id={$id}' class='btn btn-info m-r-1em'>Read</a>";
+
+            // we will use this to download the file
+            echo "<a href='#' class='btn btn-info m-r-1em'>Download</a>";
              
             // we will use this links on next part of this post
             echo "<a href='update.php?id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
@@ -110,7 +115,7 @@ echo "</table>";
 
 // PAGINATION
 // count total number of rows
-$query = "SELECT COUNT(*) as total_rows FROM products";
+$query = "SELECT COUNT(*) as total_rows FROM $tableName";
 $stmt = $con->prepare($query);
  
 // execute query
@@ -120,10 +125,10 @@ $stmt->execute();
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
 $total_rows = $row['total_rows'];
 
-
 // paginate records
 $page_url="index.php?";
 include_once "paging.php";
+     
 }
  
 // if no records found
@@ -131,21 +136,33 @@ else{
     echo "<div class='alert alert-danger'>No records found.</div>";
 }
 ?>
-         
-    </div> <!-- end .container -->
-     
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    
 <!-- Latest compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
 
+<!-- Confirm delete record -->
+<script type='text/javascript'>
+// confirm record deletion
+function delete_user( id ){     
+    var answer = confirm('Are you sure?');
+    if (answer){
+        // if user clicked ok, 
+        // pass the id to delete.php and execute the delete query
+        window.location = 'delete.php?id=' + id;
+    } 
+}
+</script>
 
-
-<script scr="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
- 
-</body>
-</html>
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="col-lg-4 col-md-8 col-sm-12">
+            <p><img src="../../images/IGT_Logo_White.png" alt="IGT Logo" class="footer-logo" /></p>
+            <?php include('../../templates/footer.php');
