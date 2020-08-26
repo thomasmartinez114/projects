@@ -16,8 +16,8 @@
         <br>
       </div>
       <div class="modal-footer">
-        <button type="submit" name="upload" class="btn btn-primary">Delete</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="submit" name="upload" class="btn btn-success">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
       </div>
       </form>
     </div>

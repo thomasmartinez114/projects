@@ -1,3 +1,1 @@
-Robocopy "C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\dist\" "\\usausgnieqa01\Webpages\GNIE_QA\sites\CR\FILES" /S /R:1 /W:1 /LOG:C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt
-
-Robocopy "C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\database\" "\\usausgnieqa01\Webpages\GNIE_QA\sites\FILES" /S /R:1 /W:1 /LOG:C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt
+Robocopy "C:\CareerDevs\github\projects\gnie\php-beginner-crud-level-1\" "C:\xampp\htdocs\gnie_files\" /S /R:1 /W:1 /LOG:"C:\xampp\htdocs\gnie_files\MigratedFiles\migrated.txt"
