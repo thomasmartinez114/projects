@@ -29,6 +29,8 @@
 <?php include('./modal/upload-modal.php'); ?>
 <!-- Edit -->
 <?php include('./modal/edit-modal.php'); ?>
+<!-- Delete -->
+<?php include('./modal/delete-modal.php'); ?>
 
 
 <div class="container">
@@ -101,15 +103,16 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         echo "<td>{$modified}</td>";
         echo "<td>";
 
-              // we will use this to download the file
+              // Download file
             echo "<a href='#' class='btn btn-info m-r-1em'>Download</a>";
 
-              // we will use this links on next part of this post
+              // Edit file
             // echo "<a href='update.php?id={$id}' class='btn btn-primary m-r-1em'>Edit</a>";
             echo "<button type='button' class='btn btn-primary m-r-1em' data-toggle='modal' data-target='#filesEditModal'>Edit</button>";
 
-              // we will use this links on next part of this post
-            echo "<a href='#' onclick='delete_user({$id});'  class='btn btn-danger'>Delete</a>";
+              // Delete file
+            // echo "<a href='#' onclick='delete_user({$id});'  class='btn btn-danger'>Delete</a>";
+            echo "<button type='button' class='btn btn-danger m-r-1em' data-toggle='modal' data-target='#filesDeleteModal'>Delete</button>";
         echo "</td>";
     echo "</tr>";
 }

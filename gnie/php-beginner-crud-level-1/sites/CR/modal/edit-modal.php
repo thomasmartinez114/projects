@@ -12,7 +12,7 @@
       <div class="modal-body">
         <div class="form-group">
             <label for="inputFileName">File Name</label>
-            <input type="fileName" class="form-control" id="fileName" aria-describedby="fileHelp" placeholder="Enter name of file">
+            <input type="fileName" class="form-control" id="fileName" aria-describedby="fileHelp" placeholder="Edit name of file">
         </div>
         <br>
       </div>
