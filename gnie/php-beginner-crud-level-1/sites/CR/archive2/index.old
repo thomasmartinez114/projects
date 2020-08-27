@@ -149,7 +149,7 @@ else{
 </div>
 
 <!-- Confirm delete file here -->
-<script type='text/javascript'>
+<!-- <script type='text/javascript'>
 // confirm record deletion
 function delete_user( id ){
      
@@ -160,7 +160,7 @@ function delete_user( id ){
         window.location = 'delete.php?id=' + id;
     } 
 }
-</script>
+</script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
