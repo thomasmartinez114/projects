@@ -1,0 +1,93 @@
+/* light blue #1b9ddb */
+/* dark blue #0c51a1; */
+/* darker blue #003865 */
+/* orange #ff671f */
+
+/* Imported Font */
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+
+
+/* Removing hyperlink blue */
+.rmv-link {
+  text-decoration: none;
+  color: white;
+}
+
+.rmv-link:hover {
+  color: #ff671f;
+  font-weight: bold;
+}
+
+/* Line space between links */
+/* .rmv-link>p {
+  line-height: 15px;
+} */
+
+.row-top {
+  padding-top: 5%;
+}
+
+.row {
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #0c51a1;
+  color: white;
+  /* padding: top right/left bottom */
+  padding: 20px 0 0 0;
+  height: 250px;
+}
+
+/* .footer-container {
+  border: 2px solid black;
+  height: 250px;
+} */
+
+.footer-logo {
+  height: 45px;
+}
+
+.footer-col-title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 20px;
+}
+
+/* Remove space between # and toll free text */
+#space-bottom {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.space-top {
+  margin-top: 0;
+  /* font-size: 15px; */
+}
+
+/* .footer-info {
+  height: auto;
+  border: solid black 2px;
+} */
+
+/* Return to GNIE Button - Radar */
+/* .return-gnie-btn {
+  margin-bottom: 10px;
+} */
+
+.rmv-btnlink {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}

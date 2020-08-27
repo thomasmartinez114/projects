@@ -13,7 +13,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="icon" type="image/png" href="../../../images/LogoGlobe.png" />
 
-<title>GNIE | FILES | CR</title>
+<title>GNIE | FILES | CR |</title>
 </head>
 
 <body>

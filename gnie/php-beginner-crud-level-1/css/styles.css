@@ -1,0 +1,167 @@
+/* light blue #1b9ddb */
+/* dark blue #0c51a1; */
+/* darker blue #003865 */
+/* orange #ff671f */
+
+/* Imported Font */
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap");
+
+/* Removing hyperlink blue */
+.rmv-link {
+  text-decoration: none;
+  color: white;
+}
+
+.rmv-link:hover {
+  color: #ff671f;
+  font-weight: bold;
+}
+
+/* Line space between links */
+.rmv-link > p {
+  line-height: 15px;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: relative;
+}
+
+.navbar-logo {
+  height: 87px;
+}
+
+.title {
+  font-family: "Work Sans", sans-serif;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  color: #0c51a1;
+}
+
+/* Header */
+
+.page-header {
+  position: relative;
+}
+
+.image-header {
+  width: 100%;
+  height: 110px;
+  position: relative;
+}
+
+/* Photo Grid */
+.container {
+  background-color: #e8f7ff;
+  position: relative;
+  height: 800px;
+}
+
+.image-tile {
+  height: 100px;
+  transition: 0.4s;
+}
+
+.image-tile:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.row-top {
+  padding-top: 5%;
+}
+
+.row {
+  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+/* .overlay:hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #1b9ddb;
+} */
+
+/* Footer */
+.page-footer {
+  background-color: #0c51a1;
+  color: white;
+  /* padding: top right/left bottom */
+  padding: 20px 0 10px;
+}
+
+.footer-logo {
+  height: 45px;
+}
+
+.footer-col-title {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 20px;
+}
+
+/* Remove space between # and toll free text */
+#space-bottom {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.space-top {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+/* .footer-info {
+  height: auto;
+  border: solid black 2px;
+} */
+
+/* Return to GNIE Button - Radar */
+/* .return-gnie-btn {
+  margin-bottom: 10px;
+} */
+
+.rmv-btnlink {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* iFrame styling */
+iframe {
+  /* border: solid 2px black; */
+  height: 500px;
+  width: 800px;
+}
+
+.m-r-1em {
+  margin-right: 1em;
+}
+.m-b-1em {
+  margin-bottom: 1em;
+}
+.m-l-1em {
+  margin-left: 1em;
+}
+.mt0 {
+  margin-top: 0;
+}
+
+th {
+  text-align: center;
+}
