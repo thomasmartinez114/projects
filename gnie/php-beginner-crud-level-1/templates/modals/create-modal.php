@@ -17,10 +17,11 @@
                         <input type="text" name="fileName" class="form-control" placeholder="Enter name of file">
                     </div>
 
-                    <!-- <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div> -->
+                    <div class="form-group">
+                        <form method='post' action='' enctype="multipart/form-data">
+                            Select file : <input type='file' name='file' id='file' class='form-control'><br>
+                        </form>
+                    </div>
 
                 </div>
                 <div class="modal-footer">
