@@ -15,6 +15,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">File Name</th>
+            <th scope="col">Edit</th>
         </tr>
     </thead>
 
@@ -28,6 +29,9 @@
         <tr>
             <td> <?php echo $row['id'] ?></td>
             <td> <?php echo $row['fileName'] ?></td>
+            <td>
+                <button type="button" class="btn btn-success">Edit</button>
+            </td>
         </tr>
     </tbody>
     <?php
