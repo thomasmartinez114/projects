@@ -11,11 +11,12 @@
 ?>
 
 <table class="table table-hover table-bordered">
-    <thead class="thead-dark">
+    <thead class="thead-primary">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">File Name</th>
             <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
     </thead>
 
@@ -31,6 +32,9 @@
             <td> <?php echo $row['fileName'] ?></td>
             <td>
                 <button type="button" class="btn btn-success editBtn">Edit</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger deleteBtn">Delete</button>
             </td>
         </tr>
     </tbody>

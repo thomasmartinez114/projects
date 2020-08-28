@@ -36,6 +36,9 @@
 
     // Edit Modal
     include('../../templates/modals/update-modal.php');
+   
+    // Delete Modal
+    include('../../templates/modals/delete-modal.php');
     ?>
 
     <!-- Navigation Bar -->
@@ -62,13 +65,36 @@
             </div>
 
             <div class="card">
-                <div class="card-body">
+                <div>
                     <?php include('../../templates/modals/read-modal.php'); ?>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- Delete File Function -->
+    <script>
+    $(document).ready(function() {
+        $('.deleteBtn').on('click', function() {
+
+            // Display delete Modal
+            $('#deleteModal').modal('show');
+
+            // Display file information on the delete modal
+            // $tr = $(this).closest('tr');
+
+            // var data = $tr.children("td").map(function() {
+            //     return $(this).text();
+            // }).get();
+
+            // console.log(data);
+
+            // $('#update_id').val(data[0]);
+
+        });
+    });
+    </script>
 
     <!-- Edit File Function -->
     <script>
