@@ -43,13 +43,13 @@
     </nav>
 
     <div class="container">
-        <div class="jumbotron">
+        <div class="">
 
-            <div class="card">
+            <!-- <div class="card">
                 <h2>PHP Modal</h2>
-            </div>
+            </div> -->
 
-            <div class="card">
+            <div class="">
                 <div class="card-body">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addFileModal">

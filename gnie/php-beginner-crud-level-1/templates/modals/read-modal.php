@@ -10,8 +10,8 @@
     $query_run = mysqli_query($connection, $query);
 ?>
 
-<table class="table table-striped">
-    <thead>
+<table class="table table-hover table-bordered">
+    <thead class="thead-dark">
         <tr>
             <th scope="col">ID</th>
             <th scope="col">File Name</th>
