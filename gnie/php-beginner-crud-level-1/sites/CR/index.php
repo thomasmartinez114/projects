@@ -35,7 +35,7 @@
     include('../../templates/modals/create-modal.php'); 
 
     // Edit Modal
-    include('../../templates/modals/edit-modal.php');
+    include('../../templates/modals/update-modal.php');
     ?>
 
     <!-- Navigation Bar -->

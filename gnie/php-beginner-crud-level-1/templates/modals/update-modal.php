@@ -9,7 +9,7 @@
                 </button>
             </div>
 
-            <form action="updateFile.php" method="POST">
+            <form action="updateCode.php" method="POST">
                 <div class="modal-body">
 
                     <input type="hidden" name="update_id" id="update_id">
