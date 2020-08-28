@@ -12,12 +12,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
     <link rel="icon" type="image/png" href="../../../images/LogoGlobe.png" />
 
     <title>GNIE | FILES | CR |</title>
 </head>
 
 <body>
+
+    <?php 
+    // Database File
+    include('../database.php');
+
+    //  Create Modal
+    include('../../templates/modals/create-modal.php'); 
+    ?>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light bg-light">
@@ -28,9 +44,11 @@
 
     <div class="container">
         <div class="jumbotron">
+
             <div class="card">
                 <h2>PHP Modal</h2>
             </div>
+
             <div class="card">
                 <div class="card-body">
                     <!-- Button trigger modal -->
@@ -39,26 +57,15 @@
                     </button>
                 </div>
             </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <?php include('../../templates/modals/read-modal.php'); ?>
+                </div>
+            </div>
+
         </div>
     </div>
-
-
-    <?php 
-    // Database File
-    include('../database.php');
-
-    //  Create Modal
-    include('../../templates/modals/create-modal.php'); 
-    ?>
-
-    <!-- Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-    </script>
 
     <!-- Footer -->
     <footer class="page-footer">
