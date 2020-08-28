@@ -75,8 +75,20 @@
     $(document).ready(function() {
         $('.editBtn').on('click', function() {
 
+            // Display Edit Modal
             $('#editModal').modal('show');
 
+            // Display file information on the edit modal
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#update_id').val(data[0]);
+            $('#fileName').val(data[1]);
 
         });
     });

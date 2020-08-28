@@ -9,12 +9,15 @@
                 </button>
             </div>
 
-            <form action="insertCode.php" method="POST">
+            <form action="updateFile.php" method="POST">
                 <div class="modal-body">
+
+                    <input type="hidden" name="update_id" id="update_id">
 
                     <div class="form-group">
                         <label>File Name</label>
-                        <input type="text" name="fileName" class="form-control" placeholder="Enter name of file">
+                        <input type="text" name="fileName" id="fileName" class="form-control"
+                            placeholder="Enter name of file">
                     </div>
 
                     <!-- <div class="form-group">
@@ -24,7 +27,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" name="saveFile" class="btn btn-success">Save File</button>
+                    <button type="submit" name="updateFile" class="btn btn-success">Save File</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </form>
