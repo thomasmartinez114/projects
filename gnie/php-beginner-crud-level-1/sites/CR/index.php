@@ -33,6 +33,9 @@
 
     //  Create Modal
     include('../../templates/modals/create-modal.php'); 
+
+    // Edit Modal
+    include('../../templates/modals/edit-modal.php');
     ?>
 
     <!-- Navigation Bar -->
@@ -66,6 +69,18 @@
 
         </div>
     </div>
+
+    <!-- Edit File Function -->
+    <script>
+    $(document).ready(function() {
+        $('.editBtn').on('click', function() {
+
+            $('#editModal').modal('show');
+
+
+        });
+    });
+    </script>
 
     <!-- Footer -->
     <footer class="page-footer">

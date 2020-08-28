@@ -30,7 +30,7 @@
             <td> <?php echo $row['id'] ?></td>
             <td> <?php echo $row['fileName'] ?></td>
             <td>
-                <button type="button" class="btn btn-success">Edit</button>
+                <button type="button" class="btn btn-success editBtn">Edit</button>
             </td>
         </tr>
     </tbody>
