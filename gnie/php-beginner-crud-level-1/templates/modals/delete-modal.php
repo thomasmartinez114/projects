@@ -12,13 +12,13 @@
             <form action="deleteCode.php" method="POST">
                 <div class="modal-body">
 
-                    <input type="hidden" name="update_id" id="update_id">
+                    <input type="hidden" name="delete_id" id="delete_id">
 
-                    <p>Confirm deletion of file</p>
+                    <p>Are you sure?</p>
 
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" name="updateFile" class="btn btn-success">Yes</button>
+                    <button type="submit" name="deleteFile" class="btn btn-success">Yes</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                 </div>
             </form>

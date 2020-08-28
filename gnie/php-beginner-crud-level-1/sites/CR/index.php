@@ -82,15 +82,15 @@
             $('#deleteModal').modal('show');
 
             // Display file information on the delete modal
-            // $tr = $(this).closest('tr');
+            $tr = $(this).closest('tr');
 
-            // var data = $tr.children("td").map(function() {
-            //     return $(this).text();
-            // }).get();
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
 
-            // console.log(data);
+            console.log(data);
 
-            // $('#update_id').val(data[0]);
+            $('#delete_id').val(data[0]);
 
         });
     });

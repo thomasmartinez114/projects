@@ -10,7 +10,7 @@
     $query_run = mysqli_query($connection, $query);
 ?>
 
-<table class="table table-hover table-bordered">
+<table class="table table-hover table-bordered table-dark">
     <thead class="thead-primary">
         <tr>
             <th scope="col">ID</th>
