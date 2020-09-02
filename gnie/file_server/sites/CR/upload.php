@@ -28,12 +28,12 @@ if(isset($_POST["saveFile"])) {
 
   if($query_run)
     {
-        echo '<script> alert("File Saved"); </script>';
+        // echo '<script> alert("File Saved"); </script>';
         header('Location: index.php');
     }
     else
     {
-        echo '<script> alert("File Not Saved"); </script>';
+        // echo '<script> alert("File Not Saved"); </script>';
     }
 
   if($check !== false) {
