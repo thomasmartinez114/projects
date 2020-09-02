@@ -10,6 +10,7 @@ if(isset($_POST['deleteFile']))
 {
     $id = $_POST['delete_id'];
 
+    // Remove file from MySQL DB
     $query = "DELETE FROM $tableName WHERE id='$id'";
     $query_run = mysqli_query($connection, $query);
 
