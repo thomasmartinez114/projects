@@ -20,10 +20,12 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["saveFile"])) {
 
   $fileName = $_POST['fileName'];
+      // specify when this record was inserted to the database
+  $created = date('Y-m-d H:i:s');
 
   $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
 
-  $query = "INSERT INTO $tableName (`fileName`) VALUES ('$fileName')";
+  $query = "INSERT INTO $tableName (`fileName`,`created`) VALUES ('$fileName','$created')";
   $query_run = mysqli_query($connection, $query);
 
   if($query_run)
