@@ -3,7 +3,7 @@
 $host = "localhost";
 $db_name = "gnie_files";
 $username = "root";
-$password = "databas3";
+$password = "test123#";
 
 // check connection
 try {
