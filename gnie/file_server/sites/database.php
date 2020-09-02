@@ -2,8 +2,8 @@
 // connect to database
 $host = "localhost";
 $db_name = "gnie_files";
-$username = "root";
-$password = "test123#";
+$username = "gnie_files";
+$password = "databas3";
 
 // check connection
 try {

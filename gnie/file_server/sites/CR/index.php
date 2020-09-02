@@ -32,13 +32,13 @@
     include('../database.php');
 
     //  Create Modal
-    include('../../templates/modals/create-modal.php'); 
+    include('./modals/create-modal.php'); 
 
     // Edit Modal
-    include('../../templates/modals/update-modal.php');
+    include('./modals/update-modal.php');
    
     // Delete Modal
-    include('../../templates/modals/delete-modal.php');
+    include('./modals/delete-modal.php');
     ?>
 
     <!-- Navigation Bar -->
@@ -62,7 +62,7 @@
 
             <div class="card">
                 <div>
-                    <?php include('../../templates/modals/read-modal.php'); ?>
+                    <?php include('./modals/read-modal.php'); ?>
                 </div>
             </div>
 

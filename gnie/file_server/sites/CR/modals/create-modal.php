@@ -9,8 +9,7 @@
                 </button>
             </div>
 
-            <!-- <form action="insertCode.php" method="POST"> -->
-			<form action="index.php" method="post" enctype="multipart/form-data" >
+            <form method='post' action='upload.php' enctype="multipart/form-data">
                 <div class="modal-body">
 
                     <div class="form-group">
@@ -19,9 +18,7 @@
                     </div>
 
                     <div class="form-group">
-                        <form method='post' action='' enctype="multipart/form-data">
-                            Select file : <input type='file' name='fileUpload' id='file' class='form-control'><br>
-                        </form>
+                            Select file : <input type='file' name='fileUpload' id='fileUpload' class='form-control'><br>
                     </div>
 
                 </div>

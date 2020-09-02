@@ -19,12 +19,6 @@
                         <input type="text" name="fileName" id="fileName" class="form-control"
                             placeholder="Enter name of file">
                     </div>
-					
-					<div class="form-group">
-                        <form method='post' action='' enctype="multipart/form-data">
-                            Select file : <input type='file' name='fileUpload' id='file' class='form-control'><br>
-                        </form>
-                    </div>
 
                     <!-- <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
