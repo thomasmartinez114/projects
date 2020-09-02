@@ -51,10 +51,6 @@
     <div class="container">
         <div class="">
 
-            <!-- <div class="card">
-                <h2>PHP Modal</h2>
-            </div> -->
-
             <div class="">
                 <div class="card-body">
                     <!-- Button trigger modal -->
