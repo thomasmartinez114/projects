@@ -28,6 +28,7 @@
 <body>
 
     <?php 
+    
     // Database File
     include('../database.php');
 
@@ -36,9 +37,10 @@
 
     // Edit Modal
     include('./modals/update-modal.php');
-   
+
     // Delete Modal
     include('./modals/delete-modal.php');
+    
     ?>
 
     <!-- Navigation Bar -->

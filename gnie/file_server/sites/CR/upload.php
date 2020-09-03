@@ -20,43 +20,55 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 if(isset($_POST["saveFile"])) {
 
   $fileName = $_POST['fileName'];
-      // specify when this record was inserted to the database
+      
+  // specify when this record was inserted to the database
   $created = date('Y-m-d H:i:s');
+      
+  // get client username
+  $username = getenv('USERNAME');
 
   $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
 
-  $query = "INSERT INTO $tableName (`fileName`,`created`) VALUES ('$fileName','$created')";
+  // Query to MySQL storing the fileName, created, username
+  $query = "INSERT INTO $tableName (`fileName`,`created`,`username`) VALUES ('$fileName','$created','$username')";
   $query_run = mysqli_query($connection, $query);
 
-  if($query_run)
-    {
-        // echo '<script> alert("File Saved"); </script>';
-        header('Location: index.php');
-    }
-    else
-    {
+  if($query_run) {
+
+      // echo '<script> alert("File Saved"); </script>';
+     header('Location: index.php');
+    
+      }
+    
+    else {
         // echo '<script> alert("File Not Saved"); </script>';
     }
 
   if($check !== false) {
     // echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
-  } else {
+  } 
+  
+    else {
     // echo "File is not an image.";
     $uploadOk = 0;
   }
 }
 
-// Check if file already exists
+  // Check if file already exists
 if (file_exists($target_file)) {
+  
   echo "Sorry, file already exists.";
   $uploadOk = 0;
+
 }
 
-// Check file size
+  // Check file size
 if ($_FILES["fileUpload"]["size"] > 500000) {
+
   echo "Sorry, your file is too large.";
   $uploadOk = 0;
+
 }
 
 // Allow certain file formats
