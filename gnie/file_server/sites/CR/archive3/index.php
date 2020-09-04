@@ -28,35 +28,32 @@
 <body>
 
     <?php 
-
-    // get client username
-    // $userName = $_SERVER['SESSION_USER'];
-    // echo $userName;
-
-    
     // Database File
     include('../database.php');
 
     //  Create Modal
-    include('./modals/create-modal.php'); 
+    include('../../templates/modals/create-modal.php'); 
 
     // Edit Modal
-    include('./modals/update-modal.php');
-
+    include('../../templates/modals/update-modal.php');
+   
     // Delete Modal
-    include('./modals/delete-modal.php');
-    
+    include('../../templates/modals/delete-modal.php');
     ?>
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light bg-light">
-        <a href="../../../index.php" class="navbar-brand"><img src="../../images/logos/GNIEfiles.png"
-                alt="GNIE Files Logo" class="navbar-logo" /></a>
+        <a href="../../../index.php" class="navbar-brand"><img src="../../../images/logos/GNIEfiles.png"
+                alt="GNIE Direct Logo" class="navbar-logo" /></a>
         <h3 class="title">Files</h3>
     </nav>
 
     <div class="container">
         <div class="">
+
+            <!-- <div class="card">
+                <h2>PHP Modal</h2>
+            </div> -->
 
             <div class="">
                 <div class="card-body">
@@ -69,7 +66,7 @@
 
             <div class="card">
                 <div>
-                    <?php include('./modals/read-modal.php'); ?>
+                    <?php include('../../templates/modals/read-modal.php'); ?>
                 </div>
             </div>
 
@@ -84,6 +81,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
     </script>
+	
+	<!-- Datatables Scripts -->
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"> </script>
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"> </script>
 
