@@ -1,16 +1,3 @@
-<?php
-
-include('tableName.php');
-include('../database.php');
-
-$connection = mysqli_connect($host, $username, $password);
-$db = mysqli_select_db($connection, $db_name);
-
-$queryUpdate = "SELECT fileName FROM $tableName WHERE id = $id";
-$query_run = mysqli_query($connection, $queryUpdate);
-
-?>
-
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -29,7 +16,7 @@ $query_run = mysqli_query($connection, $queryUpdate);
 
                     <div class="form-group">
                         <label>File Name</label>
-                        <input type="text" name="fileName" id="fileName" value="<?php echo $query_run ?>" class="form-control" placeholder="Enter name of file">
+                        <input type="text" name="fileName" id="fileName" class="form-control" placeholder="Enter name of file" action=<?php ltrim(); ?>>
                     </div>
 
                     <div class="form-group">

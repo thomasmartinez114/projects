@@ -19,7 +19,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 // Check if image file is a actual image or fake image
 if(isset($_POST["saveFile"])) {
 
-  $fileName = $_POST['fileName'];
+  // Set file name and ltrim to remove whitespace
+  $fileName = ltrim($_POST['fileName']);
       
     // specify when this record was inserted to the database
   $created = date('Y-m-d H:i:s');

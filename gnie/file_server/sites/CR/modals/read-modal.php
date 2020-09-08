@@ -20,17 +20,17 @@
     </thead>
 
     <?php
-    if($query_run)
-    {
-        foreach($query_run as $row)
-        {
+    if($query_run){
+
+        foreach($query_run as $row){
+            
     ?>
     <tbody>
         <tr>
             <td> <?php echo $row['id'] ?></td>
             <td> <?php echo $row['fileName'] ?></td>
             <td>
-                <button type="button" class="btn btn-info downloadBtn">Download</button>
+            <a href='<?php echo $row['fullName']; ?>' download><button type="button" class="btn btn-info downloadBtn">Download</button></a>
                 <button type="button" class="btn btn-success editBtn">Edit</button>
                 <button type="button" class="btn btn-danger deleteBtn">Delete</button>
             </td>

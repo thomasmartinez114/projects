@@ -22,7 +22,7 @@ if(isset($_POST['updateFile'])){
         // ID record of upload
     $id = $_POST['update_id'];
         // name of file
-    $fileName = $_POST['fileName'];
+    $fileName = ltrim($_POST['fileName']);
         // get client username
     $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
         // specify when this record was inserted to the database
