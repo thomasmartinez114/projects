@@ -28,11 +28,6 @@
 <body>
 
     <?php 
-
-    // get client username
-    // $userName = $_SERVER['SESSION_USER'];
-    // echo $userName;
-
     
     // Database File
     include('../database.php');
@@ -50,7 +45,7 @@
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-light bg-light">
-        <a href="../../../index.php" class="navbar-brand"><img src="../../images/logos/GNIEfiles.png"
+        <a href="../../../index.php" class="navbar-brand"><img src="../../../images/logos/GNIEfiles.png"
                 alt="GNIE Files Logo" class="navbar-logo" /></a>
         <h3 class="title">Files</h3>
     </nav>
@@ -90,28 +85,8 @@
 
     <!-- Database JQuery Function -->
 
-    <!-- Delete File Function -->
-    <script>
-    $(document).ready(function() {
-        $('.deleteBtn').on('click', function() {
-
-            // Display delete Modal
-            $('#deleteModal').modal('show');
-
-            // Display file information on the delete modal
-            $tr = $(this).closest('tr');
-
-            var data = $tr.children("td").map(function() {
-                return $(this).text();
-            }).get();
-
-            console.log(data);
-
-            $('#delete_id').val(data[0]);
-
-        });
-    });
-    </script>
+    <!-- Download File Function -->
+ 
 
     <!-- Edit File Function -->
     <script>
@@ -132,6 +107,29 @@
 
             $('#update_id').val(data[0]);
             $('#fileName').val(data[1]);
+
+        });
+    });
+    </script>
+
+    <!-- Delete File Function -->
+    <script>
+    $(document).ready(function() {
+        $('.deleteBtn').on('click', function() {
+
+            // Display delete Modal
+            $('#deleteModal').modal('show');
+
+            // Display file information on the delete modal
+            $tr = $(this).closest('tr');
+
+            var data = $tr.children("td").map(function() {
+                return $(this).text();
+            }).get();
+
+            console.log(data);
+
+            $('#delete_id').val(data[0]);
 
         });
     });
