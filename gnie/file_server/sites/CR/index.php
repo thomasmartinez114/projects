@@ -28,7 +28,7 @@
 <body>
 
     <?php 
-    
+        
     // Database File
     include('../database.php');
 
@@ -40,9 +40,6 @@
 
     // Delete Modal
     include('./modals/delete-modal.php');
-
-    // Download Modal
-    // include('./modals/download-modal.php');
     
     ?>
 

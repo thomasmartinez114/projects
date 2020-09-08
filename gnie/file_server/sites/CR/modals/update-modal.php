@@ -1,3 +1,10 @@
+<?php
+
+include('tableName.php');
+include('../database.php');
+
+?>
+
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -16,7 +23,7 @@
 
                     <div class="form-group">
                         <label>File Name</label>
-                        <input type="text" name="fileName" class="form-control" placeholder="Enter name of file">
+                        <input type="text" name="fileName" value="<?php echo htmlspecialchars($db_name.$tableName.$fileName, ENT_QUOTES);  ?>"class="form-control" placeholder="Enter name of file">
                     </div>
 
                     <div class="form-group">

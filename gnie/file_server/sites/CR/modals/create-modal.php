@@ -18,7 +18,8 @@
                     </div>
 
                     <div class="form-group">
-                            Select file: <input type='file' name='fileUpload' id='fileUpload' class='form-control'><br>
+                        <label>Select file:</label>
+                        <input type='file' name='fileUpload' id='fileUpload' class='form-control'><br>
                     </div>
 
                 </div>

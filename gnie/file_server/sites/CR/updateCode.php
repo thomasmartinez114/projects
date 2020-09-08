@@ -10,10 +10,10 @@ $db = mysqli_select_db($connection, $db_name);
 
 ///////////////////////////////////////////////////////////////////////
 
-// $target_dir = "../../uploads/CR/";
-// $target_file = $target_dir . basename($_FILES["updateFile"]["name"]);
-// $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$target_dir = "../../uploads/CR/";
+$target_file = $target_dir . basename($_FILES["updateFile"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 ///////////////////////////////////////////////////////////////////////
 

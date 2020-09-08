@@ -11,7 +11,7 @@ if(isset($_POST['saveFile']))
     $fileName = $_POST['fileName'];
 	$fileUpload = $_POST['fileUpload'];
 
-    $query = "INSERT INTO $tableName (`fileName`, 'fileUpload') VALUES ('$fileName', '$fileUpload')";
+    $query = "INSERT INTO $tableName (`fileName`, `fileUpload`) VALUES ('$fileName', '$fileUpload')";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)
