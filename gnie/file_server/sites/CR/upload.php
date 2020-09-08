@@ -27,7 +27,7 @@ if(isset($_POST["saveFile"])) {
     // get client username
   $createdBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
 
-  $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
+  // $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
 
     // Query to MySQL storing the fileName, created, username
   $query = "INSERT INTO $tableName (`fileName`,`created`,`createdBy`,`fullName`) VALUES ('$fileName','$created','$createdBy','$target_file')";
