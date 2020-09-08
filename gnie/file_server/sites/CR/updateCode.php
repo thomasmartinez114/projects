@@ -78,24 +78,24 @@ if(isset($_POST['updateFile'])){
     }
     
     // Allow certain file formats
-    if($imageFileType != "jpg" 
-    && $imageFileType != "oft" 
-    && $imageFileType != "pdf" 
-    && $imageFileType != "png" 
-    && $imageFileType != "jpeg" 
-    && $imageFileType != "doc"
-    && $imageFileType != "docx"
-    && $imageFileType != "xsl" 
-    && $imageFileType != "xlsx" 
-    && $imageFileType != "txt" 
-    && $imageFileType != "msg" 
-    && $imageFileType != "gif"
-    && $imageFileType != "log" ) {
+    // if($imageFileType != "jpg" 
+    // && $imageFileType != "oft" 
+    // && $imageFileType != "pdf" 
+    // && $imageFileType != "png" 
+    // && $imageFileType != "jpeg" 
+    // && $imageFileType != "doc"
+    // && $imageFileType != "docx"
+    // && $imageFileType != "xsl" 
+    // && $imageFileType != "xlsx" 
+    // && $imageFileType != "txt" 
+    // && $imageFileType != "msg" 
+    // && $imageFileType != "gif"
+    // && $imageFileType != "log" ) {
     
-      echo "Sorry, only JPG, JPEG, PNG, OFT, DOC, XLSX, TXT, MSG & GIF files are allowed.";
-      $uploadOk = 0;
+    //   echo "Sorry, only JPG, JPEG, PNG, OFT, DOC, XLSX, TXT, MSG & GIF files are allowed.";
+    //   $uploadOk = 0;
     
-    }
+    // }
     
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
