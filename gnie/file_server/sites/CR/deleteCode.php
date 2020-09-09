@@ -23,6 +23,6 @@ if(isset($_POST['deleteFile']))
     {
         echo '<script> alert("File Was Not Removed"); </script>';
     }
+    
 }
-
 ?>
