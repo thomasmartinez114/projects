@@ -22,7 +22,8 @@ if(isset($_POST['deleteFile']))
     {
         // Delete from the Directory
         foreach($query_delete_run as $row){
-            $filePath = substr(strrchr($row['fullName'], '\\'), 1);
+            $filePath = substr(strrchr($row['fullName'], '../../'), 1);
+            echo $filePath;
             unlink($filePath);
         }
     }
