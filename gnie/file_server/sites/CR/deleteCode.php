@@ -17,14 +17,14 @@ if(isset($_POST['deleteFile']))
         foreach($query_delete_run as $row){
         
         // Path desired
-        $target_dir = '../../uploads/CR/archive/';
+        $target_dir = '../../uploads/cr/archive/';
 
         // Current Full File Name
         $fullName = $row['fullName'];
         
 
         // Trim the path from the $fullName
-        $removeDir = '../../uploads/CR/';
+        // $removeDir = '../../uploads/CR/';
         $trimmedPath = substr($fullName, 17);
         // echo $trimmedPath;
 

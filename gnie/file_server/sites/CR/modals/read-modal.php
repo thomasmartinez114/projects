@@ -33,7 +33,7 @@
                 <a href='<?php echo $row['fullName']; ?>' download><button type="button" class="btn btn-info">Download</button></a>
                 <button type="button" class="btn btn-success editBtn">Edit</button>
                 <button type="button" class="btn btn-danger deleteBtn">Delete</button>
-                <button type="button" class="btn btn-secondary">Copy Link</button>
+                <!-- <button type="button" class="btn btn-secondary">Copy Link</button> -->
             </td>
         </tr>
     </tbody>
