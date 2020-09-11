@@ -6,131 +6,67 @@ include('../database.php');
 $connection = mysqli_connect($host, $username, $password);
 $db = mysqli_select_db($connection, $db_name);
 
-$target_dir = "../../uploads/cr/";
-$target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-///////////////////////////////////////////////////////////////////////
-
-if(isset($_POST['updateFile'])){
-  
-
-  echo "<br>";
-  echo "<br>";
-  echo "Image file type: ".$imageFileType;
-  echo "<br>";
-  echo "<br>";
-
-        // ID record of upload
+if(isset($_POST['updateFile']))
+{
     $id = $_POST['update_id'];
 
+    {
+        $query_update = "SELECT * FROM $tableName WHERE id='$id'";
+        $query_update_run = mysqli_query($connection, $query_update);
+
+        foreach($query_update_run as $row){
+        
+        // Path desired
+        $target_dir = '../../uploads/cr/';
+
+        // File Name
+        $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
+
+        // Current Full File Name
+        $fullName = $row['fullName'];
+
         // name of file
-    $fileName = ltrim($_POST['fileName']);
+        $fileName = ltrim($_POST['fileName']);
 
         // get client username
-    $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
+        $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
 
         // specify when this record was inserted to the database
-    $modified = date('Y-m-d H:i:s');
+        $modified = date('Y-m-d H:i:s');
 
-    $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$target_file', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
-    $query_run = mysqli_query($connection, $query);
+        // Trim the path from the $fullName
+        // $removeDir = '../../uploads/CR/';
+        $trimmedPath = substr($fullName, 17);
+        // echo $trimmedPath;
 
-    if($query_run) {
+        // Set new path
+        $newPath = $target_dir.$trimmedPath;
+        // echo $newPath;
 
-      // foreach($query_run as $row){
+        // Move File
+        $moveFile = rename($fullName, $newPath);
 
-      //   $fullName = $row['fullName'];
+        $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$target_file', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
+        $query_run = mysqli_query($connection, $query);
 
-        
-      //   if (file_exists($target_file)) {
-          
-      //     $uploadOk = 1;
-    
-      //     $newName = $_FILES["fileUpload"];
-      //     echo $newName;
-    
-      //     $overwriteFile = rename($fullName, $newName);
-        
-      //   }
+        }
 
-      // }
-        
-        echo '<script> alert("File Updated"); </script>';
-        // header("location: index.php");
-    
     }
     
-    else {
-        
-        echo '<script> alert("File Not Updated"); </script>';
-    
-    }
+    {
+        // $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$newPath', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
+        // $query_run = mysqli_query($connection, $query);
 
-///////////////////////////////////////////////////////////////////////
-
-    // if($check !== false) {
-  
-    //     // echo "File is an image - " . $check["mime"] . ".";
-    //     $uploadOk = 1;
-      
-    //   } 
-      
-    //     else {
-    
-    //     // echo "File is not an image.";
-    //     $uploadOk = 0;
-      
-    //   }
+        if($query_run)
+        {
+            echo '<script> alert("File Updated"); </script>';
+            header("location: index.php");
+        }
+        else
+        {
+            echo '<script> alert("File Was Not Updated"); </script>';
+        }
     }
     
-      // Check if file already exists
-
-      // Query to pull file
-      // $query_overwrite = "SELECT * FROM $tableName WHERE id='$id'";
-      // $query_overwrite_run = mysqli_query($connection, $query_overwrite);
-
-      // foreach($query as $row){
-
-      //   $fullName = $row['fullName'];
-
-        
-      //   if (file_exists($target_file)) {
-          
-      //     $uploadOk = 1;
-    
-      //     $newName = $_FILES["fileUpload"];
-    
-      //     $overwriteFile = rename($fullName, $newName);
-        
-      //   }
-
-      // }
-    
-    // Check if $uploadOk is set to 0 by an error
-    // if ($uploadOk == 0) {
-    
-    //   echo "Sorry, your file was not uploaded.";
-    // // if everything is ok, try to upload file
-    
-    // } 
-    
-    // else {
-    
-    //   if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
-      
-    //     echo "The file ". basename( $_FILES["fileUpload"]["name"]). " has been uploaded.";
-      
-    //   } 
-      
-    //   else {
-      
-    //     echo "Sorry, there was an error uploading your file.";
-      
-    //   }
-// }
-
-///////////////////////////////////////////////////////////////////////
-
+}
 ?>
