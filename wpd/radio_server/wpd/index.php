@@ -22,7 +22,7 @@
     <!-- IGT Globe Icon -->
     <link rel="icon" type="image/png" href="../../../images/LogoGlobe.png" />
 
-    <title>GNIE | FILES | CR |</title>
+    <title>WPD | ASD</title>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
     <nav class="navbar navbar-light bg-light">
         <a href="../../../index.php" class="navbar-brand"><img src="../../../images/logos/GNIEfiles.png"
                 alt="GNIE Files Logo" class="navbar-logo" /></a>
-        <h3 class="title">Files</h3>
+        <h3 class="title">Radio Inventory</h3>
     </nav>
 
     <div class="container">
@@ -57,7 +57,7 @@
                 <div class="card-body">
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addFileModal">
-                        Add File
+                        Add Radio
                     </button>
                 </div>
             </div>
