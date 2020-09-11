@@ -16,7 +16,7 @@
 
                     <div class="form-group">
                         <label>File Name</label>
-                        <input type="text" name="fileName" id="fileName" class="form-control" placeholder="Enter name of file">
+                        <input type="text" name="fileName" id="fileName" class="form-control" placeholder="Enter name of file" action=<?php ltrim(); ?>>
                     </div>
 
                     <div class="form-group">

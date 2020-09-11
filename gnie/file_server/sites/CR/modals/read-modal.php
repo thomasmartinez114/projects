@@ -30,10 +30,10 @@
             <td> <?php echo $row['id'] ?></td>
             <td> <?php echo $row['fileName'] ?></td>
             <td>
-                <a href='<?php echo $row['fullName']; ?>' download><button type="button" class="btn btn-info">Download</button></a>
+            <a href='<?php echo $row['fullName']; ?>' download><button type="button" class="btn btn-info downloadBtn">Download</button></a>
                 <button type="button" class="btn btn-success editBtn">Edit</button>
                 <button type="button" class="btn btn-danger deleteBtn">Delete</button>
-                <!-- <button type="button" class="btn btn-secondary">Copy Link</button> -->
+                <!-- <button type="button" class="btn btn-secondary copyBtn">Copy Link</button> -->
             </td>
         </tr>
     </tbody>

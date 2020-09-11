@@ -11,7 +11,7 @@ $db = mysqli_select_db($connection, $db_name);
 $target_dir = "../../uploads/cr/";
 $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
 $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -27,8 +27,6 @@ if(isset($_POST["saveFile"])) {
       
     // get client username
   $createdBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
-
-  // $check = getimagesize($_FILES["fileUpload"]["tmp_name"]);
 
     // Query to MySQL storing the fileName, created, username
   $query = "INSERT INTO $tableName (`fileName`,`created`,`createdBy`,`fullName`) VALUES ('$fileName','$created','$createdBy','$target_file')";
@@ -78,26 +76,6 @@ if ($_FILES["fileUpload"]["size"] > 500000) {
 
 }
 
-// Allow certain file formats
-// if($imageFileType != "jpg" 
-//    && $imageFileType != "oft" 
-//    && $imageFileType != "pdf" 
-//    && $imageFileType != "png" 
-//    && $imageFileType != "jpeg" 
-//    && $imageFileType != "doc"
-//    && $imageFileType != "docx"
-//    && $imageFileType != "xsl" 
-//    && $imageFileType != "xlsx" 
-//    && $imageFileType != "txt" 
-//    && $imageFileType != "msg" 
-//    && $imageFileType != "gif"
-//    && $imageFileType != "log" ) {
-
-//   echo "Sorry, only JPG, JPEG, PNG, OFT, DOC, DOCX, XLSX, TXT, MSG & GIF files are allowed.";
-//   $uploadOk = 0;
-
-// }
-
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
 
@@ -120,4 +98,5 @@ else {
   
   }
 }
+
 ?>

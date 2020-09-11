@@ -1,72 +1,103 @@
 <?php
 
+///////////////////////////////////////////////////////////////////////
+
 include('tableName.php');
 include('../database.php');
 
 $connection = mysqli_connect($host, $username, $password);
 $db = mysqli_select_db($connection, $db_name);
 
-if(isset($_POST['updateFile']))
-{
+///////////////////////////////////////////////////////////////////////
+
+$target_dir = "../../uploads/cr/";
+$target_file = $target_dir . basename($_FILES["updateFile"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+///////////////////////////////////////////////////////////////////////
+
+if(isset($_POST['updateFile'])){
+
+        // ID record of upload
     $id = $_POST['update_id'];
-
-    {
-        $query_update = "SELECT * FROM $tableName WHERE id='$id'";
-        $query_update_run = mysqli_query($connection, $query_update);
-
-        foreach($query_update_run as $row){
-        
-        // Path desired
-        $target_dir = '../../uploads/cr/';
-
-        // File Name
-        $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
-
-        // Current Full File Name
-        $fullName = $row['fullName'];
-
         // name of file
-        $fileName = ltrim($_POST['fileName']);
-
+    $fileName = ltrim($_POST['fileName']);
         // get client username
-        $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
-
+    $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
         // specify when this record was inserted to the database
-        $modified = date('Y-m-d H:i:s');
+    $modified = date('Y-m-d H:i:s');
 
-        // Trim the path from the $fullName
-        // $removeDir = '../../uploads/CR/';
-        $trimmedPath = substr($fullName, 17);
-        // echo $trimmedPath;
+    $query = "UPDATE $tableName SET fileName = '$fileName', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
+    $query_run = mysqli_query($connection, $query);
 
-        // Set new path
-        $newPath = $target_dir.$trimmedPath;
-        // echo $newPath;
-
-        // Move File
-        $moveFile = rename($fullName, $newPath);
-
-        $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$target_file', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
-        $query_run = mysqli_query($connection, $query);
-
-        }
-
+    if($query_run) {
+        
+        echo '<script> alert("File Updated"); </script>';
+        header("location: index.php");
+    
     }
     
-    {
-        // $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$newPath', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
-        // $query_run = mysqli_query($connection, $query);
+    else {
+        
+        echo '<script> alert("File Not Updated"); </script>';
+    
+    }
 
-        if($query_run)
-        {
-            echo '<script> alert("File Updated"); </script>';
-            header("location: index.php");
-        }
-        else
-        {
-            echo '<script> alert("File Was Not Updated"); </script>';
-        }
+///////////////////////////////////////////////////////////////////////
+
+    if($check !== false) {
+  
+        // echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+      
+      } 
+      
+        else {
+    
+        // echo "File is not an image.";
+        $uploadOk = 0;
+      
+      }
     }
     
+      // Check if file already exists
+    if (file_exists($target_file)) {
+      
+      echo "Sorry, file already exists.";
+      $uploadOk = 0;
+    
+    }
+    
+      // Check file size
+    if ($_FILES["fileUpload"]["size"] > 500000) {
+    
+      echo "Sorry, your file is too large.";
+      $uploadOk = 0;
+    
+    }
+    
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+    
+      echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    
+    } 
+    
+    else {
+    
+      if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
+      
+        echo "The file ". basename( $_FILES["fileUpload"]["name"]). " has been uploaded.";
+      
+      } 
+      
+      else {
+      
+        echo "Sorry, there was an error uploading your file.";
+      
+      }
 }
+
 ?>
