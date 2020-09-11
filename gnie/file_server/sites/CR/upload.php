@@ -11,7 +11,7 @@ $db = mysqli_select_db($connection, $db_name);
 $target_dir = "../../uploads/cr/";
 $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
 $uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 ///////////////////////////////////////////////////////////////////////
 
