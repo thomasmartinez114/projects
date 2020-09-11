@@ -28,6 +28,13 @@ if(isset($_POST['updateFile']))
         // Current Full File Name
         $fullName = $row['fullName'];
 
+        // Trim the path from the $fullName
+        // $removeDir = '../../uploads/cr/';
+        $trimmedPath = substr($fullName, 17);
+
+        // Set new path
+        $newPath = $target_dir.$trimmedPath;
+
         // Delete the file from directory
         unlink($fullName);
 
@@ -44,7 +51,7 @@ if(isset($_POST['updateFile']))
         // specify when this record was inserted to the database
          $modified = date('Y-m-d H:i:s');
 
-         $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$target_file', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
+         $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$newPath', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
          $query_run = mysqli_query($connection, $query);
 
          
@@ -59,9 +66,32 @@ if(isset($_POST['updateFile']))
         header('Location: index.php');
     }
 
-    // need to upload file now to directory
+    
 }
 
+// need to upload file now to directory
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+
+    echo "Sorry, your file was not uploaded.";
+  // if everything is ok, try to upload file
+  
+  } 
+  
+  else {
+  
+    if (move_uploaded_file($_FILES["fileEdit"]["tmp_name"], $target_file)) {
+    
+      echo "The file ". basename( $_FILES["fileEdit"]["name"]). " has been uploaded.";
+    
+    } 
+    
+    else {
+    
+      echo "Sorry, there was an error uploading your file.";
+    
+    }
+  }
 
 
 
