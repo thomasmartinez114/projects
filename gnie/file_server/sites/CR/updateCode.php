@@ -18,82 +18,59 @@ if(isset($_POST['updateFile']))
 {
     $id = $_POST['update_id'];
 
-    {
-        $query_update = "SELECT * FROM $tableName WHERE id = '$id'";
-        $query_update_run = mysqli_query($connection, $query_update);
+    {        
+            $query_update = "SELECT * FROM $tableName WHERE id = '$id'";
+            $query_update_run = mysqli_query($connection, $query_update);
 
-        // Loop through Database Row
-        foreach($query_update_run as $row)
-        {
-        // Current Full File Name
-        $fullName = $row['fullName'];
+            // Loop through Database Row
+            foreach($query_update_run as $row)
+            {
 
-        // Trim the path from the $fullName
-        // $removeDir = '../../uploads/cr/';
-        $trimmedPath = substr($fullName, 17);
+            // Move the original file to archive folder
+            $target_archive_dir = '../../uploads/cr/archive/';
 
-        // Set new path
-        $newPath = $target_dir.$trimmedPath;
+            // Current Full File Name
+            $fullName = $row['fullName'];
 
-        // Delete the file from directory
-        unlink($fullName);
+            // Trim the path from the $fullName
+            // $removeDir = '../../uploads/cr/';
+            $trimmedPath = substr($fullName, 17);
 
-        /////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////
+            // Set archive path
+            $archivePath = $target_archive_dir.$trimmedPath;
 
-        // Upload the file
-        // name of file
-        $fileName = ltrim($_POST['fileName']);
+            // Move the file from directory to archive
+            // unlink($fullName);
+            $moveFile = rename($fullName, $archivePath);
 
-            // get client username
-        $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
-
-        // specify when this record was inserted to the database
-         $modified = date('Y-m-d H:i:s');
-
-         $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$newPath', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
-         $query_run = mysqli_query($connection, $query);
-
-         
+            
         }
-        
-        
+            // // Upload the file that will overwrite the previous
+
+            // // name of file
+            // $fileName = ltrim($_POST['fileName']);
+            // // echo $fileName;
+
+            // // Add new file into folder
+            // $moveFile = rename($newPath, $newPath);
+
+            //     // get client username
+            // $modifiedBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
+
+            // // specify when this record was inserted to the database
+            // $modified = date('Y-m-d H:i:s');
+
+            // $query = "UPDATE $tableName SET fileName = '$fileName', fullName = '$newPath', modifiedBy = '$modifiedBy', modified = '$modified' WHERE id = '$id'";
+            // $query_run = mysqli_query($connection, $query);
+
+
+        if($query_run)
+        {
+            // redirect back to the index page
+            header('Location: index.php');
+        }
     }
 
-    if($query_run)
-    {
-        // redirect back to the index page
-        header('Location: index.php');
-    }
-
-    
 }
-
-// need to upload file now to directory
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-
-    echo "Sorry, your file was not uploaded.";
-  // if everything is ok, try to upload file
-  
-  } 
-  
-  else {
-  
-    if (move_uploaded_file($_FILES["fileEdit"]["tmp_name"], $target_file)) {
-    
-      echo "The file ". basename( $_FILES["fileEdit"]["name"]). " has been uploaded.";
-    
-    } 
-    
-    else {
-    
-      echo "Sorry, there was an error uploading your file.";
-    
-    }
-  }
-
-
-
 
 ?>
