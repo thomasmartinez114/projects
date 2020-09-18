@@ -11,8 +11,8 @@
                 <a href="https://igt-apps.easyvista.com/s/ServiceDesk?token=7tyAYomBOM5v0UiN%2FXlTBw%3D%3D#?page=5bc732033ef0a" class='rmv-link' target='_blank'>
                     <p>EasyVista</p>
                 </a>
-				<a href="./sites/forms/index.php" class='rmv-link' target='_blank'>
-					<p>Forms</p>
+				<a href="https://files.gnieqa.myigt.com" class='rmv-link' target='_blank'>
+					<p>Files</p>
                 </a>
                 <a href="http://nrc.myigt.com/" class='rmv-link' target='_blank'>
                     <p class='space-top'>NRC Homepage</p>

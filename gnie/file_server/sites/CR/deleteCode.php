@@ -28,13 +28,10 @@ if(isset($_POST['deleteFile']))
         
 
         // Trim the path from the $fullName
-        // $removeDir = '../../uploads/cr/';
         $trimmedPath = substr($fullName, 17);
-        // echo $trimmedPath;
 
         // Set new path
         $newPath = $target_dir.$trimmedPath;
-        // echo $newPath;
 
         // Move File
         $moveFile = rename($fullName, $newPath);

@@ -20,7 +20,12 @@
                     </div>
 
                     <div class="form-group">
-                            Select file: <input type='file' name='fileEdit' id='fileEdit' class='form-control'><br>
+                        <label>Article ID</label>
+                        <input type="text" name="articleId" id="articleId" class="form-control" placeholder="Enter article ID" action=<?php ltrim(); ?>>
+                    </div>
+
+                    <div class="form-group">
+                            Select file: <input type='file' name='fileUpload' id='fileUpload' class='form-control'><br>
                     </div>
 
                 </div>

@@ -14,7 +14,12 @@
 
                     <div class="form-group">
                         <label>File Name</label>
-                        <input type="text" name="fileName" class="form-control" placeholder="Enter name of file">
+                        <input type="text" name="fileName" class="form-control" placeholder="Enter Name of File">
+                    </div>
+					
+					<div class="form-group">
+                        <label>Article ID</label>
+                        <input type="text" name="articleId" class="form-control" placeholder="Enter Article ID">
                     </div>
 
                     <div class="form-group">

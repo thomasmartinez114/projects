@@ -1,0 +1,1 @@
+<a href="../index.php" class="navbar-brand"><img src="../images/GNIEDirect_logo.png" alt="GNIE Direct Logo" class="navbar-logo" /></a>

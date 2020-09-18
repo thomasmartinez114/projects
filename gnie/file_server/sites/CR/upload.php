@@ -11,7 +11,7 @@ $db = mysqli_select_db($connection, $db_name);
 $target_dir = "../../uploads/cr/";
 $target_file = $target_dir . basename($_FILES["fileUpload"]["name"]);
 $uploadOk = 1;
-// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 ///////////////////////////////////////////////////////////////////////
 
@@ -29,8 +29,8 @@ if(isset($_POST["saveFile"])) {
   $createdBy = substr(strrchr($_SERVER['AUTH_USER'], '\\'), 1);
 
     // Query to MySQL storing the fileName, created, username
-  $query = "INSERT INTO $tableName (`fileName`,`created`,`createdBy`,`fullName`) VALUES ('$fileName','$created','$createdBy','$target_file')";
-  $query_run = mysqli_query($connection, $query);
+    $query = "INSERT INTO $tableName (`articleId`,`fileName`,`created`,`createdBy`,`fullName`) VALUES ('$articleId','$fileName','$created','$createdBy','$target_file')";
+    $query_run = mysqli_query($connection, $query);
 
   if($query_run) {
 

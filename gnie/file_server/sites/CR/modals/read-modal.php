@@ -14,6 +14,7 @@
     <thead class="thead-light">
         <tr>
             <th scope="col">ID</th>
+			<th scope="col">Article ID</th>
             <th scope="col">File Name</th>
             <th scope="col">Actions</th>
         </tr>
@@ -28,12 +29,13 @@
     <tbody>
         <tr>
             <td> <?php echo $row['id'] ?></td>
+			<td> <?php echo $row['articleId'] ?></td>
             <td> <?php echo $row['fileName'] ?></td>
             <td>
             <a href='<?php echo $row['fullName']; ?>' download><button type="button" class="btn btn-info downloadBtn">Download</button></a>
                 <button type="button" class="btn btn-success editBtn">Edit</button>
                 <button type="button" class="btn btn-danger deleteBtn">Delete</button>
-                <!-- <button type="button" class="btn btn-secondary copyBtn">Copy Link</button> -->
+                <button type="button" class="btn btn-secondary copyBtn">Copy Link</button>
             </td>
         </tr>
     </tbody>
