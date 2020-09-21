@@ -1,4 +1,1 @@
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-    <a href="./sites/ca.php" Files"><img src="./images/microservices/files.png" class="image-menu" alt="Files" /></a>
-    <p>Files</p>
-</div>
+<div title="Files"><a href="https://files.gnieqa.myigt.com/index.php" target="_blank"><img src="./images/microservices/files.png" class="spark-images"></a></div>

@@ -1,4 +1,1 @@
-<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
-    <a href="./sites/ca.php" Scheduler"><img src="./images/microservices/scheduler.png" class="image-menu" alt="Scheduler" /></a>
-    <p>Scheduler</p>
-</div>
+<div title="Scheduler"><a href="https://sch.gnieqa.myigt.com/index.php" target="_blank"><img src="./images/microservices/scheduler.png" class="spark-images"></a></div>
