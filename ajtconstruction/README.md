@@ -2,3 +2,4 @@
 - [ ] about-us.html
 - [ ] contact.html
    - [ ] Quote form on page
+- [ ] gallery.html
