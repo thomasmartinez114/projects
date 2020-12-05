@@ -3,3 +3,4 @@
 - [ ] contact.html
    - [ ] Quote form on page
 - [ ] gallery.html
+   - [ ] Grid style for images
